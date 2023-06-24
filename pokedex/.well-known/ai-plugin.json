@@ -9,10 +9,10 @@
     },
     "api": {
         "type": "openapi",
-        "url": "http://localhost:80/.well-known/openapi.yaml",
+        "url": "https://pokedex.automateyournetwork.ca/.well-known/openapi.yaml",
         "is_user_authenticated": false
     },
-    "logo_url": "http://localhost:80/staticfiles/pokedex.png",
+    "logo_url": "https://pokedex.automateyournetwork.ca/staticfiles/pokedex.png",
     "contact_email": "ptcapo@gmail.com",
     "legal_info_url": "https://pokeapi.co/about"
 }
