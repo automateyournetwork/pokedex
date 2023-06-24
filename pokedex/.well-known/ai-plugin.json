@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Pokedex",
+    "name_for_model": "Pokedex",
+    "description_for_human": "Pokedex is a plugin into the PokeAPI Pokemon API.",
+    "description_for_model": "Plugin to the PokeAPI Pokemon API data. The data will include Pokemon JSON data related to Pokemon. Please provide an initial summary of the Pokemon API JSON data, help the user understand it, and highlight anything important.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:80/.well-known/openapi.yaml",
+        "is_user_authenticated": false
+    },
+    "logo_url": "http://localhost:80/staticfiles/pokedex.png",
+    "contact_email": "ptcapo@gmail.com",
+    "legal_info_url": "https://pokeapi.co/about"
+}
