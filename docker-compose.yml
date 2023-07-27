@@ -4,6 +4,7 @@ services:
   pokedex:
     environment:
       - HOST_NAME="https://pokedex.automateyournetwork.ca"
+    container_name: pokedex
     image: johncapobianco/pokedex:pokedex
     build: 
       context: ./
