@@ -133,6 +133,8 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
     'sentry-trace'
 ]
 
+CSRF_TRUSTED_ORIGINS=['https://pokedex.automateyournetwork.ca']
+
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True

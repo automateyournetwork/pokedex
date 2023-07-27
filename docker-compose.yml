@@ -2,16 +2,18 @@ version: '3'
  
 services:
   pokedex:
+    environment:
+      - HOST_NAME="https://pokedex.automateyournetwork.ca"
     image: johncapobianco/pokedex:pokedex
     build: 
       context: ./
       dockerfile: ./docker/Dockerfile
     ports:
-      - "443:8000"
+      - "8001:8000"
     depends_on:
       - db
-    volumes:
-      - /etc/letsencrypt/archive/pokedex.automateyournetwork.ca/:/etc/letsencrypt/live/pokedex.automateyournetwork.ca/
+    # volumes:
+    #   - /etc/letsencrypt/archive/pokedex.automateyournetwork.ca/:/etc/letsencrypt/live/pokedex.automateyournetwork.ca/
 
   db:
     image: 'postgres'
@@ -22,8 +24,12 @@ services:
     volumes:
       - ./data/db:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5433:5432"
 
 volumes:
   pgadmin:
     driver: local
+
+networks:
+  all-plugins-nginx-proxy_app_network:
+    name: all-plugins-nginx-proxy_app_network
