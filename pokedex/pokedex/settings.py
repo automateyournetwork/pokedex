@@ -74,7 +74,7 @@ DATABASES = {
         'USER': 'pokedex',
         'PASSWORD': 'pokedex',
         'HOST': 'db',
-        'PORT': 5432,
+        'PORT': 5433,
     }
 }
 

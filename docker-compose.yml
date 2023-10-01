@@ -28,8 +28,10 @@ services:
     volumes:
       - ./data/db:/var/lib/postgresql/data
     ports:
-      - "5433:5432"
-
+      - "5433:5433"
+    command: -p 5433
+    networks:
+      - all-plugins-nginx-proxy_app_network
 volumes:
   pgadmin:
     driver: local
